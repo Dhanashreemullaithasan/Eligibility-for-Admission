@@ -27,40 +27,38 @@ DEVELOPED BY:DHANASHREE M
 REGISTER NO:212221230018
 ```
 using System;
-
-public class ConsoleApp1
+public class Exercise10
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
-        int p, c, m, tot1, tot2;
+        int p, c, m;
         string name;
-        Console.WriteLine("Enter the Physics mark:");
-        p= Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter the chemistry mark:");
-        c = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter the maths mark:");
-        m = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter a Name of the student");
+        Console.WriteLine("Enter the student name:");
         name = Console.ReadLine();
-        tot1 = p + c + m;
-        tot2 = p + m;
-        if (p >= 55 && c >= 50 && m >= 65)
+        Console.Write("Marks obtained in Maths :");
+        m = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Marks obtained in Chemistry :");
+        c = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Marks obtained in Physics :");
+        p = Convert.ToInt32(Console.ReadLine());
+        int total1 = m + p + c;
+        int total2 = m + p;
+
+        if (m >= 65 && p >= 55 && c >= 50)
         {
-            if (tot1 >= 180 || tot2 >= 140)
+            if((total1>=100) || total2>=140)
             {
-                Console.WriteLine("{0} is eligible for engineering admission", name);
+                Console.WriteLine(name+"is eligible for engineering addmission");
             }
             else
             {
-                Console.WriteLine(name + " is not eligible for engineering admission");
-
+                Console.Write(name+" is not eligible.\n\n");
             }
         }
         else
         {
-            Console.WriteLine("{0} is not eligible for engineering admission", name);
+            Console.Write(name+" is not eligible.\n\n");
         }
-
     }
 }
 
